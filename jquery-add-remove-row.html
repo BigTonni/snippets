@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var counter = 0;
+
+                $("#addrow").on("click", function () {
+
+                    var counter = $('#total_items').val();
+
+//                    $(".ibtnDel").on("click", function () {
+//                        counter = -1;
+//                    });
+
+
+                    var newRow = $("<tr>");
+                    var cols = "";
+
+                    cols += '<td><input type="text" name="name' + counter + '"/></td>';
+
+                    cols += '<td><input type="button" class="ibtnDel"  value="Delete"></td>';
+                    newRow.append(cols);
+
+                    $("table.order-list").append(newRow);
+                    counter++;
+                    $('#total_items').val(counter)
+                });
+
+
+                $("table.order-list").on("click", ".ibtnDel", function () {
+                    $(this).closest("tr").remove();
+                    
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <table id="myTable" class="order-list">           
+                <tr><th>Name</th></tr>
+                <tr>
+                    <td>
+                        <input type="text" name="name1" />
+                    </td>
+                </tr>
+        </table>
+        <input type="hidden" id="total_items" value="2" />
+        <input type="button" id="addrow" value="Add Row" />
+    </body>
+</html>
+
