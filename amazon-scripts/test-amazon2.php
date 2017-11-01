@@ -9,8 +9,8 @@ function vardump($str) {
 if (!class_exists('S3')) require_once 'S3.php';
 
 // AWS access info
-$access_key = 'AKIAIFHERF43A5FQUIDQ';// my - 'AKIAICVMD7QV2EKUFA3Q'
-$access_secret = '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';// my - 'lHbep+kvYeqg5xs5e6hxHO0wrAjpDmqzEsxrOVVy' 
+$access_key = 'XXX';
+$access_secret = 'YYY';
 if (!defined('awsAccessKey')) define('awsAccessKey', $access_key);
 if (!defined('awsSecretKey')) define('awsSecretKey', $access_secret);
 
@@ -190,7 +190,6 @@ final class S3Wrapper extends S3 {
 
 S3::setAuth(awsAccessKey, awsSecretKey);
 
-//$bucketName = 'artbeef/92/8947d0897811e6b89ce911c124b470';
 $bucketName = uniqid('s3testbucket');
 
 //echo "Creating bucket: {$bucketName}\n";
@@ -213,44 +212,3 @@ var_dump(unlink("s3://{$bucketName}/test.txt"));
 echo "\nRemoving bucket: {$bucketName}\n";
 var_dump(rmdir("s3://{$bucketName}"));*/
 ?>
-<!--html>
-<title>VIDEO TEST</title>
-<body>
-<script type='text/javascript' src='http://theme.loc/mediaplayer/jwplayer.js'></script>
-<script>jwplayer.key="ABCdeFG123456SeVenABCdeFG123456SeVen==";</script>
-<div id="container1"  >Loading video...</div>
-          <script type="text/javascript">
-              jwplayer('container1').setup(
-              {
-                  'id': 'container1',
-                  'wmode': 'transparent',
-                  'icons': 'true',
-                  'allowscriptaccess': 'always',
-                  'allownetworking': 'all',
-                  'file': 'Test.flv',
-                  'width': '500', 'height': '307',
-                  'controlbar': 'bottom',
-                  'dock': 'false',
-                  'provider':'rtmp',
-                  'streamer':'rtmp://s7jk6hm2lxyd8.cloudfront.net/cfx/st',
-                  'modes': [
-                      {type: 'flash', src: 'http://theme.loc/mediaplayer/jwplayer.flash.swf'},
-                      {
-                        type: 'html5',
-                        config: {
-                         'file': 'https://artbeef.s3-eu-central-1.amazonaws.com/8b/91d550897811e68974ef47053fa718/Test.flv',
-                         'provider': 'video'
-                        }
-                      },
-                      {
-                        type: 'download',
-                        config: {
-                         'file': 'https://artbeef.s3-eu-central-1.amazonaws.com/8b/91d550897811e68974ef47053fa718/Test.flv',
-                         'provider': 'video'
-                        }
-                      }
-                  ]
-              });
-          </script>
-</body>
-</html-->
