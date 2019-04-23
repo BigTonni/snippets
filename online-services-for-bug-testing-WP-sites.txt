@@ -1,0 +1,12 @@
+//links
+*) https://habr.com/ru/post/324140/
+**) https://timeweb.com/ru/community/articles/7-onlayn-servisov-dlya-testirovaniya-uyazvimostey-sayta-na-wordpress-1
+
+1)https://hackertarget.com/wordpress-security-scan/ 
+2)https://scanurl.net/
+3)https://sitecheck.sucuri.net/
+4)https://www.siteguarding.com/
+5) https://app.upguard.com/webscan
+6) https://wpneuron.com/wordpress-vulnerability-scanner/
+7) https://wprecon.com/
+8) https://suip.biz/ru/?act=wpscan
