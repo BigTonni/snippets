@@ -1,0 +1,15 @@
+//links
+https://stripe.com/gb/payments/elements
+https://stripe.com/docs/payments/accept-a-payment-charges#web
+https://stripe.com/gb/payments/elements
+
+//code
+https://stripe.dev/elements-examples/
+https://github.com/stripe/elements-examples
+
+//Crossbrowser Testing
+https://www.browserling.com/
+https://browserstack.com
+
+//polyfill
+https://cdn.jsdelivr.net/npm/es6-object-assign@1.1.0/dist/object-assign-auto.min.js
